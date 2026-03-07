@@ -1,0 +1,28 @@
+@use 'abstracts' as *;
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-yellow: #e9ff61;
+  --color-gray-500: #999999;
+  --color-gray-300: #e9e9e9;
+  --color-gray-100: #edf2f6;
+
+  --background-primary: var(--color-white);
+  --background-secondary: var(--color-gray-100);
+  --background-inverted: var(--color-black);
+  --background-accent: var(--color-yellow);
+
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-500);
+  --text-tertiary: var(--color-gray-300);
+  --text-inverted: var(--color-white);
+
+  --font-family-primary: 'Syne', sans-serif;
+
+  --container-max-width: #{toRem(1240)};
+  --container-padding-x: #{toRem(16)};
+
+  --transition-duration: 0.2s;
+  --transition-timing-function: ease-in-out;
+}
