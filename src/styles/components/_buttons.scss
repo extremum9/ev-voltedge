@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: toRem(10);
+  padding: toRem(10) toRem(20);
+  white-space: nowrap;
+  &-primary {
+    color: var(--text-accent);
+    background-color: var(--background-inverted);
+  }
+
+  &-secondary {
+    color: var(--text-primary);
+    background-color: var(--background-secondary);
+  }
+
+  &-accent {
+    color: var(--text-primary);
+    background-color: var(--background-accent);
+  }
+
+  &-big {
+    padding: toRem(18) toRem(24);
+  }
+}
