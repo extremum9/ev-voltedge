@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="/src/main.scss" />
   </head>
   <body>
+    <header class="topbar">
+      <div class="topbar-container">
+        <a class="topbar-brand" href="/">
+          <img
+            src="/images/logo-light.png"
+            width="206"
+            height="64"
+            alt="EV Voltedge"
+          />
+        </a>
+
+        <nav class="topbar-navigation">
+          <ul class="topbar-navigation-list" role="list" aria-label="Primary">
+            <li>
+              <a class="topbar-navigation-link" href="/" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="topbar-navigation-link" href="#">Products</a>
+            </li>
+            <li>
+              <a class="topbar-navigation-link" href="#">Features</a>
+            </li>
+            <li>
+              <a class="topbar-navigation-link" href="#">Gear Shop</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="button button-accent button-big" href="#">
+          Order Now
+          <svg width="14" height="14" aria-hidden="true">
+            <use href="/icons/sprite.svg#arrow-up-right"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
