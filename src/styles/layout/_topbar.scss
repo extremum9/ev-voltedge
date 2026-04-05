@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.topbar {
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(24);
+    padding: toRem(18);
+    border-radius: toRem(10);
+    background-color: rgb(var(--color-white-rgb), 0.5);
+    backdrop-filter: blur(toRem(12));
+  }
+
+  &-navigation {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(12) toRem(48);
+    }
+
+    &-link {
+      color: var(--text-primary);
+      @include hover {
+        color: var(--text-primary-hover);
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@
   column-gap: toRem(10);
   padding: toRem(10) toRem(20);
   white-space: nowrap;
+  transition-property: background-color;
   &-primary {
     color: var(--text-accent);
     background-color: var(--background-inverted);
@@ -20,6 +21,9 @@
   &-accent {
     color: var(--text-primary);
     background-color: var(--background-accent);
+    @include hover {
+      background-color: var(--background-accent-hover);
+    }
   }
 
   &-big {
