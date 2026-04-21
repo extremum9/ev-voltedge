@@ -19,7 +19,7 @@
           />
         </a>
 
-        <nav class="topbar-navigation">
+        <nav id="topbar-navigation" class="topbar-navigation">
           <ul class="topbar-navigation-list" role="list" aria-label="Primary">
             <li>
               <a class="topbar-navigation-link" href="/" aria-current="page"
@@ -38,12 +38,23 @@
           </ul>
         </nav>
 
-        <a class="button button-accent button-big" href="#">
-          Order Now
-          <svg width="14" height="14" aria-hidden="true">
-            <use href="/icons/sprite.svg#arrow-up-right"></use>
-          </svg>
-        </a>
+        <div class="topbar-user-actions">
+          <a class="button button-accent button-big" href="#">
+            Order Now
+            <svg width="14" height="14" aria-hidden="true">
+              <use href="/icons/sprite.svg#arrow-up-right"></use>
+            </svg>
+          </a>
+          <button
+            class="topbar-navigation-toggle-button"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-controls="topbar-navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 

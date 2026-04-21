@@ -27,6 +27,6 @@
   }
 
   &-big {
-    padding: toRem(18) toRem(24);
+    padding: fluid(18, 16) fluid(24, 20);
   }
 }

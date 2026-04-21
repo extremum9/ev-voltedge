@@ -32,4 +32,10 @@
 
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
+
+  --topbar-height: #{toRem(100)};
+
+  @include breakpoint-lg-down {
+    --topbar-height: #{toRem(80)};
+  }
 }
