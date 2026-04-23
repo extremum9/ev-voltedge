@@ -1,6 +1,27 @@
 @use '../abstracts' as *;
 
 .topbar {
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    translate: 100% 0;
+    width: 100%;
+    height: var(--topbar-height, 0);
+    border-bottom: 1px solid var(--background-inverted);
+    background-color: var(--background-primary);
+    transition: translate var(--transition-duration)
+      var(--transition-timing-function);
+  }
+
+  &.open {
+    &::before {
+      translate: 0;
+    }
+  }
+
   &-container {
     display: flex;
     align-items: center;
@@ -9,7 +30,7 @@
     min-height: var(--topbar-height);
     padding: toRem(5) toRem(18);
     border-radius: toRem(10);
-    background-color: rgb(var(--color-white-rgb), 0.5);
+    background-color: rgb(var(--background-primary-rgb), 0.5);
     @include breakpoint-xs-down {
       width: initial;
       padding-inline: var(--container-padding-x);
@@ -25,7 +46,8 @@
     }
 
     @include breakpoint-sm-down {
-      max-width: toRem(62);
+      max-width: toRem(54);
+      height: toRem(56);
       overflow: hidden;
       img {
         max-width: initial;
@@ -40,22 +62,12 @@
       position: fixed;
       inset: 0;
       translate: 100% 0;
-      padding: var(--topbar-height) var(--container-padding-x) toRem(30);
+      padding: var(--topbar-height) var(--container-padding-x) toRem(20);
       overflow-y: auto;
+      overscroll-behavior: none;
       background-color: var(--background-primary);
       transition: translate var(--transition-duration)
         var(--transition-timing-function);
-      &::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: var(--topbar-height, 0);
-        border-bottom: 1px solid var(--background-inverted);
-        background-color: inherit;
-      }
-
       .open & {
         translate: 0;
       }
@@ -63,11 +75,11 @@
 
     &-list {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       column-gap: toRem(48);
       @include breakpoint-lg-down {
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-grow: 1;
         row-gap: toRem(24);
@@ -90,11 +102,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: toRem(50);
-      height: toRem(40);
-      padding: toRem(10);
+      width: toRem(40);
+      height: toRem(30);
+      padding: toRem(5);
       color: var(--text-primary);
-
       &::before,
       &::after,
       span {
