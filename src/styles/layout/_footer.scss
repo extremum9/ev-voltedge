@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .footer {
-  padding-block: toRem(50);
+  padding-block: fluid(50, 20);
   color: var(--text-inverted);
   background:
     linear-gradient(
@@ -13,17 +13,20 @@
 
   &-container {
     width: min(toRem(1360), 100% - var(--container-padding-x) * 2);
-    padding: toRem(50);
-    background-color: var(rgba(var(--background-primary-rgb), 0.1));
+    padding: fluid(50, 20);
+    background-color: rgba(var(--background-primary-rgb), 0.1);
     backdrop-filter: blur(toRem(16));
   }
 
   &-body {
     display: grid;
-    grid-template-columns: minmax(toRem(160), 2fr) repeat(4, 1fr);
+    grid-template-columns: minmax(toRem(160), 0.45fr) 1fr;
     align-items: start;
-    gap: toRem(40);
-    margin-block-end: toRem(40);
+    gap: toRem(30) toRem(40);
+    margin-block-end: fluid(40, 30);
+    @include breakpoint-md-down {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-brand {
@@ -31,21 +34,25 @@
   }
 
   &-navigation {
-    &,
     &-list {
-      display: contents;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(toRem(150), 1fr));
+      gap: toRem(24);
+      @include breakpoint-md-down {
+        grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+      }
     }
 
     &-title {
-      margin-block-end: toRem(24);
+      margin-block-end: fluid(16, 10);
     }
 
     &-links {
       display: grid;
-      row-gap: toRem(16);
     }
 
     &-link {
+      padding-block: toRem(8);
       color: rgba(var(--text-inverted-rgb), 0.5);
       @include hover {
         color: var(--text-inverted-hover);
@@ -59,7 +66,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: toRem(16);
-    padding-block-start: toRem(40);
+    padding-block-start: fluid(40, 30);
     border-top: 1px solid rgba(var(--background-primary-rgb), 0.1);
   }
 
@@ -67,10 +74,12 @@
     &-links {
       display: flex;
       align-items: center;
-      gap: toRem(24);
+      flex-wrap: wrap;
+      column-gap: toRem(24);
     }
 
     &-link {
+      padding-block: toRem(5);
       @include hover {
         color: var(--text-inverted-hover);
       }
