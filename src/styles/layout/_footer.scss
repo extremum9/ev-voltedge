@@ -1,0 +1,79 @@
+@use '../abstracts' as *;
+
+.footer {
+  padding-block: toRem(50);
+  color: var(--text-inverted);
+  background:
+    linear-gradient(
+      0deg,
+      rgba(var(--background-inverted-rgb), 0.5) 0%,
+      rgba(var(--background-inverted-rgb), 0.5) 100%
+    ),
+    url('/images/footer/background-image.jpg') 50% / cover no-repeat;
+
+  &-container {
+    width: min(toRem(1360), 100% - var(--container-padding-x) * 2);
+    padding: toRem(50);
+    background-color: var(rgba(var(--background-primary-rgb), 0.1));
+    backdrop-filter: blur(toRem(16));
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: minmax(toRem(160), 2fr) repeat(4, 1fr);
+    align-items: start;
+    gap: toRem(40);
+    margin-block-end: toRem(40);
+  }
+
+  &-brand {
+    justify-self: start;
+  }
+
+  &-navigation {
+    &,
+    &-list {
+      display: contents;
+    }
+
+    &-title {
+      margin-block-end: toRem(24);
+    }
+
+    &-links {
+      display: grid;
+      row-gap: toRem(16);
+    }
+
+    &-link {
+      color: rgba(var(--text-inverted-rgb), 0.5);
+      @include hover {
+        color: var(--text-inverted-hover);
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: toRem(16);
+    padding-block-start: toRem(40);
+    border-top: 1px solid rgba(var(--background-primary-rgb), 0.1);
+  }
+
+  &-copyright {
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: toRem(24);
+    }
+
+    &-link {
+      @include hover {
+        color: var(--text-inverted-hover);
+      }
+    }
+  }
+}

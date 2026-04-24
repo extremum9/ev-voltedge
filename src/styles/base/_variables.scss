@@ -2,6 +2,7 @@
 
 :root {
   --color-black: #000000;
+  --color-black-rgb: 0, 0, 0;
   --color-white: #ffffff;
   --color-white-rgb: 255, 255, 255;
   --color-yellow: #e9ff61;
@@ -15,6 +16,7 @@
   --background-primary-rgb: var(--color-white-rgb);
   --background-secondary: var(--color-gray-100);
   --background-inverted: var(--color-black);
+  --background-inverted-rgb: var(--color-black-rgb);
   --background-accent: var(--color-yellow);
   --background-accent-hover: var(--color-yellow-dark);
 
@@ -24,6 +26,8 @@
   --text-tertiary: var(--color-gray-300);
   --text-accent: var(--color-yellow);
   --text-inverted: var(--color-white);
+  --text-inverted-rgb: var(--color-white-rgb);
+  --text-inverted-hover: var(--color-gray-300);
 
   --font-family-primary: 'Syne', sans-serif;
 
