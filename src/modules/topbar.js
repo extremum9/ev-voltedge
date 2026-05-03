@@ -1,14 +1,19 @@
 import { toEm } from './utilities';
 
-const initTopbar = () => {
-  const selectors = {
-    root: '.js-topbar',
-    toggleNavigationButton: '.js-topbar-navigation-toggle-button'
-  };
+const SELECTORS = {
+  ROOT: '.js-topbar',
+  TOGGLE_NAVIGATION_BUTTON: '.js-topbar-navigation-toggle-button'
+};
 
+const STATE_CLASSES = {
+  OPEN: 'open',
+  PREVENT_SCROLL: 'prevent-scroll'
+};
+
+const initTopbar = () => {
   const body = document.body;
-  const root = document.querySelector(selectors.root);
-  const toggleButton = root.querySelector(selectors.toggleNavigationButton);
+  const root = document.querySelector(SELECTORS.ROOT);
+  const toggleButton = root.querySelector(SELECTORS.TOGGLE_NAVIGATION_BUTTON);
   const tabletMediaQuery = window.matchMedia(`(max-width: ${toEm(991.98)})`);
 
   const toggleNavigation = () => {
@@ -16,14 +21,14 @@ const initTopbar = () => {
       'aria-expanded',
       `${!(toggleButton.getAttribute('aria-expanded') === 'true')}`
     );
-    body.classList.toggle('prevent-scroll');
-    root.classList.toggle('open');
+    body.classList.toggle(STATE_CLASSES.PREVENT_SCROLL);
+    root.classList.toggle(STATE_CLASSES.OPEN);
   };
 
   const resetNavigation = (mediaQuery) => {
     if (!mediaQuery.matches) {
-      body.classList.remove('prevent-scroll');
-      root.classList.remove('open');
+      body.classList.remove(STATE_CLASSES.PREVENT_SCROLL);
+      root.classList.remove(STATE_CLASSES.OPEN);
       toggleButton.setAttribute('aria-expanded', 'false');
     }
   };
