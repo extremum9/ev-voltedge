@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .topbar {
+  position: sticky;
+  z-index: var(--topbar-z-index);
   &::before {
     content: '';
     position: fixed;
