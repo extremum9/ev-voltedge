@@ -12,7 +12,6 @@
     url('/images/footer/background-image.jpg') 50% / cover no-repeat;
 
   &-container {
-    width: min(toRem(1360), 100% - var(--container-padding-x) * 2);
     padding: fluid(50, 20);
     background-color: rgba(var(--background-primary-rgb), 0.1);
     backdrop-filter: blur(toRem(16));
