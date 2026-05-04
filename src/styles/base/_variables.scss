@@ -37,8 +37,8 @@
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
 
-  --topbar-content-height: #{fluid(100, 80)};
-  --topbar-padding-block-start: #{fluid(32, 24)};
+  --topbar-content-height: #{fluid(100, 75)};
+  --topbar-padding-block-start: #{fluid(32, 16)};
   --topbar-height: calc(
     var(--topbar-content-height) + var(--topbar-padding-block-start)
   );

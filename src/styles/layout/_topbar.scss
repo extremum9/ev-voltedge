@@ -5,39 +5,17 @@
   top: 0;
   z-index: var(--topbar-z-index);
   padding-block-start: var(--topbar-padding-block-start);
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    translate: 100% 0;
-    width: 100%;
-    height: var(--topbar-height);
-    background-color: var(--background-primary);
-    transition: translate var(--transition-duration)
-      var(--transition-timing-function);
-  }
-
-  &.open {
-    &::before {
-      translate: 0;
-    }
-  }
-
   &-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: toRem(24);
+    column-gap: fluid(24, 10);
     min-height: var(--topbar-content-height);
     padding: toRem(5) toRem(18);
     border-radius: toRem(10);
-    background-color: rgb(var(--background-primary-rgb), 0.5);
+    background-color: rgba(var(--background-primary-rgb), 0.5);
     @include breakpoint-xs-down {
-      width: initial;
-      padding-inline: var(--container-padding-x);
-      border-radius: 0;
+      padding: toRem(5) toRem(10);
     }
   }
 
@@ -60,15 +38,14 @@
 
   &-navigation {
     @include breakpoint-lg-down {
-      display: flex;
-      flex-direction: column;
       position: fixed;
       inset: 0;
       translate: 100% 0;
       padding: var(--topbar-height) var(--container-padding-x) toRem(20);
       overflow-y: auto;
       overscroll-behavior: none;
-      background-color: var(--background-primary);
+      background-color: rgba(var(--background-inverted-rgb), 0.1);
+      backdrop-filter: blur(toRem(10));
       transition: translate var(--transition-duration)
         var(--transition-timing-function);
       .open & {
@@ -83,9 +60,7 @@
       column-gap: toRem(48);
       @include breakpoint-lg-down {
         flex-direction: column;
-        justify-content: center;
-        flex-grow: 1;
-        row-gap: toRem(24);
+        align-items: end;
       }
     }
 
@@ -98,6 +73,7 @@
 
       @include breakpoint-lg-down {
         font-size: toRem(24);
+        color: var(--text-inverted);
       }
     }
 
