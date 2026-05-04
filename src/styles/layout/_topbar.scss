@@ -2,7 +2,9 @@
 
 .topbar {
   position: sticky;
+  top: 0;
   z-index: var(--topbar-z-index);
+  padding-block-start: var(--topbar-padding-block-start);
   &::before {
     content: '';
     position: fixed;
@@ -11,8 +13,7 @@
     z-index: 1;
     translate: 100% 0;
     width: 100%;
-    height: var(--topbar-height, 0);
-    border-bottom: 1px solid var(--background-inverted);
+    height: var(--topbar-height);
     background-color: var(--background-primary);
     transition: translate var(--transition-duration)
       var(--transition-timing-function);
@@ -29,7 +30,7 @@
     align-items: center;
     justify-content: space-between;
     column-gap: toRem(24);
-    min-height: var(--topbar-height);
+    min-height: var(--topbar-content-height);
     padding: toRem(5) toRem(18);
     border-radius: toRem(10);
     background-color: rgb(var(--background-primary-rgb), 0.5);
