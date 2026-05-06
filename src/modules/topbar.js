@@ -1,4 +1,4 @@
-import { toEm } from './utilities';
+import { throttle, toEm } from './utilities';
 
 const SELECTORS = {
   ROOT: '.js-topbar',
@@ -7,8 +7,11 @@ const SELECTORS = {
 
 const STATE_CLASSES = {
   OPEN: 'open',
-  PREVENT_SCROLL: 'prevent-scroll'
+  PREVENT_SCROLL: 'prevent-scroll',
+  SCROLL: 'scroll'
 };
+
+const SCROLL_THRESHOLD = 30;
 
 const initTopbar = () => {
   const body = document.body;
@@ -33,10 +36,18 @@ const initTopbar = () => {
     }
   };
 
+  const toggleScrollClass = () =>
+    root.classList.toggle(
+      STATE_CLASSES.SCROLL,
+      window.scrollY > SCROLL_THRESHOLD
+    );
+
   resetNavigation(tabletMediaQuery);
+  toggleScrollClass();
 
   toggleButton.addEventListener('click', toggleNavigation);
   tabletMediaQuery.addEventListener('change', resetNavigation);
+  window.addEventListener('scroll', throttle(toggleScrollClass));
 };
 
 export default initTopbar;
