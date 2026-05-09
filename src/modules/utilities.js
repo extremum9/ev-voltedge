@@ -1,4 +1,4 @@
-export const toEm = (px) => `${px / 16}em`;
+export const toRem = (px) => `${px / 16}rem`;
 
 export const throttle = (callback, delay = 300) => {
   let throttling = false;

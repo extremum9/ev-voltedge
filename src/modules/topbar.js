@@ -1,4 +1,4 @@
-import { throttle, toEm } from './utilities';
+import { throttle, toRem } from './utilities';
 
 const SELECTORS = {
   ROOT: '.js-topbar',
@@ -17,7 +17,7 @@ const initTopbar = () => {
   const body = document.body;
   const root = document.querySelector(SELECTORS.ROOT);
   const toggleButton = root.querySelector(SELECTORS.TOGGLE_NAVIGATION_BUTTON);
-  const tabletMediaQuery = window.matchMedia(`(max-width: ${toEm(991.98)})`);
+  const tabletMediaQuery = window.matchMedia(`(width < ${toRem(992)})`);
 
   const toggleNavigation = () => {
     toggleButton.setAttribute(
