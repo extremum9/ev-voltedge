@@ -31,14 +31,14 @@
 
   --font-family-primary: 'Syne', sans-serif;
 
-  --container-max-width: #{toRem(1240)};
-  --container-padding-x: #{toRem(16)};
+  --container-width: 1240px;
+  --container-padding-inline: 16px;
 
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
 
-  --topbar-content-height: #{fluid(100, 75)};
-  --topbar-padding-block-start: #{fluid(32, 16)};
+  --topbar-content-height: #{fluid(100, 75, $unit: px)};
+  --topbar-padding-block-start: #{fluid(32, 16, $unit: px)};
   --topbar-height: calc(
     var(--topbar-content-height) + var(--topbar-padding-block-start)
   );

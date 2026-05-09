@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   column-gap: toRem(10);
-  padding: toRem(10) toRem(20);
+  padding-block: toRem(10);
+  padding-inline: toRem(20);
   white-space: nowrap;
   transition-property: background-color;
   &-primary {
@@ -27,6 +28,7 @@
   }
 
   &-big {
-    padding: fluid(18, 16) fluid(24, 20);
+    padding-block: fluid(18, 16);
+    padding-inline: fluid(24, 20);
   }
 }

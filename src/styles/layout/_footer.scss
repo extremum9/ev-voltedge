@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .footer {
-  padding-block: fluid(50, 20);
+  padding-block: fluid(50, 20, $unit: px);
   color: var(--text-inverted);
   background:
     linear-gradient(
@@ -12,17 +12,18 @@
     url('/images/footer/background-image.jpg') 50% / cover no-repeat;
 
   &-container {
-    padding: fluid(50, 20);
+    padding-block: fluid(50, 20, $unit: px);
+    padding-inline: fluid(50, 20, $unit: px);
     background-color: rgba(var(--background-primary-rgb), 0.1);
-    backdrop-filter: blur(toRem(16));
+    backdrop-filter: blur(16px);
   }
 
   &-body {
     display: grid;
-    grid-template-columns: minmax(toRem(160), 0.45fr) 1fr;
+    grid-template-columns: minmax(160px, 0.45fr) 1fr;
     align-items: start;
-    gap: toRem(30) toRem(40);
-    margin-block-end: fluid(40, 30);
+    gap: 30px 40px;
+    margin-block-end: fluid(40, 30, $unit: px);
     @include breakpoint-md-down {
       grid-template-columns: 1fr;
     }
@@ -36,7 +37,7 @@
     &-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(toRem(150), 1fr));
-      gap: toRem(24);
+      gap: 24px;
       @include breakpoint-md-down {
         grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
       }
@@ -64,8 +65,8 @@
     align-items: start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: toRem(16);
-    padding-block-start: fluid(40, 30);
+    gap: 16px;
+    padding-block-start: fluid(40, 30, $unit: px);
     border-top: 1px solid rgba(var(--background-primary-rgb), 0.1);
   }
 

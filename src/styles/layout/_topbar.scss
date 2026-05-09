@@ -9,10 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: fluid(24, 10);
+    column-gap: fluid(24, 10, $unit: px);
     min-height: var(--topbar-content-height);
-    padding: toRem(5) toRem(18);
-    border-radius: toRem(10);
+    padding-block: 5px;
+    padding-inline: 18px;
+    border-radius: 10px;
     background-color: rgba(var(--background-primary-rgb), 0.5);
     transition:
       background-color var(--transition-duration)
@@ -20,11 +21,11 @@
       box-shadow var(--transition-duration) var(--transition-timing-function);
     .scroll & {
       background-color: var(--background-primary);
-      box-shadow: 0 0 toRem(8) 0 var(--color-gray-500);
+      box-shadow: 0 0 8px 0 var(--color-gray-500);
     }
 
     @include breakpoint-xs-down {
-      padding: toRem(5) toRem(10);
+      padding-inline: 10px;
     }
   }
 
@@ -32,12 +33,12 @@
     flex-shrink: 0;
     z-index: 1;
     @include breakpoint-lg-down {
-      max-width: toRem(180);
+      max-width: 180px;
     }
 
     @include breakpoint-sm-down {
-      max-width: toRem(54);
-      height: toRem(56);
+      max-width: 54px;
+      height: 56px;
       overflow: hidden;
       img {
         max-width: initial;
@@ -50,7 +51,8 @@
       position: fixed;
       inset: 0;
       translate: 100% 0;
-      padding: var(--topbar-height) var(--container-padding-x) toRem(20);
+      padding-block: calc(var(--topbar-height) + 20px) 20px;
+      padding-inline: 24px;
       overflow-y: auto;
       overscroll-behavior: none;
       background-color: rgba(var(--background-primary-rgb), 0.9);
@@ -88,14 +90,15 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: toRem(40);
-      height: toRem(30);
-      padding: toRem(5);
+      width: 40px;
+      height: 30px;
+      padding-inline: 5px;
+      padding-block: 5px;
       color: var(--text-primary);
       &::before,
       &::after,
       span {
-        height: toRem(2);
+        height: 2px;
         background-color: currentColor;
       }
 
@@ -115,12 +118,12 @@
 
       .open & {
         &::before {
-          translate: 0 toRem(8);
+          translate: 0 8px;
           rotate: 45deg;
         }
 
         &::after {
-          translate: 0 toRem(-10);
+          translate: 0 -10px;
           rotate: -45deg;
         }
 
@@ -139,7 +142,7 @@
   &-user-actions {
     display: flex;
     align-items: center;
-    column-gap: toRem(10);
+    column-gap: 10px;
     z-index: 1;
   }
 }

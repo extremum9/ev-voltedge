@@ -15,10 +15,19 @@ $viewportMinWidth: 320;
   $maxSize,
   $minSize,
   $maxWidth: $viewportMaxWidth,
-  $minWidth: $viewportMinWidth
+  $minWidth: $viewportMinWidth,
+  $unit: rem
 ) {
   $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
   $intercept: $minSize - $slope * $minWidth;
+
+  @if $unit == px {
+    @return clamp(
+      #{$minSize}px,
+      #{$intercept}px + #{$slope * 100vw},
+      #{$maxSize}px
+    );
+  }
 
   @return clamp(
     toRem($minSize),
