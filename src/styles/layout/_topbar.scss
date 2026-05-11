@@ -1,16 +1,16 @@
 @use '../abstracts' as *;
 
 .topbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  inset-inline: 0;
+  inset-block-start: var(--topbar-inset-block-start);
   z-index: var(--topbar-z-index);
-  padding-block-start: var(--topbar-padding-block-start);
   &-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: fluid(24, 10, $unit: px);
-    min-height: var(--topbar-content-height);
+    min-height: var(--topbar-height);
     padding-block: 5px;
     padding-inline: 18px;
     border-radius: 10px;
@@ -51,7 +51,10 @@
       position: fixed;
       inset: 0;
       translate: 100% 0;
-      padding-block: calc(var(--topbar-height) + 20px) 20px;
+      padding-block: calc(
+          var(--topbar-height) + var(--topbar-inset-block-start) + 20px
+        )
+        20px;
       padding-inline: 24px;
       overflow-y: auto;
       overscroll-behavior: none;
