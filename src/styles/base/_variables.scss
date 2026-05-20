@@ -37,7 +37,7 @@
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
 
-  --topbar-height: #{fluid(100, 75, $unit: px)};
-  --topbar-inset-block-start: #{fluid(32, 16, $unit: px)};
+  --topbar-height: #{fluid(100, 75)};
+  --topbar-inset-block-start: #{fluid(32, 16)};
   --topbar-z-index: 1000;
 }

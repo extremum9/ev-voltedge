@@ -14,7 +14,7 @@ body {
 }
 
 p {
-  --paragraph-margin-bottom: #{toRem(10)};
+  --paragraph-margin-block-end: 10px;
 }
 
 button,

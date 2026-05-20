@@ -1,49 +1,47 @@
-@use 'functions' as *;
-
 @mixin breakpoint-lg-up {
-  @media (width >= toRem(992)) {
+  @media (width >= 992px) {
     @content;
   }
 }
 
 @mixin breakpoint-md-up {
-  @media (width >= toRem(768)) {
+  @media (width >= 768px) {
     @content;
   }
 }
 
 @mixin breakpoint-sm-up {
-  @media (width >= toRem(576)) {
+  @media (width >= 576px) {
     @content;
   }
 }
 
 @mixin breakpoint-xs-up {
-  @media (width >= toRem(480)) {
+  @media (width >= 480px) {
     @content;
   }
 }
 
 @mixin breakpoint-lg-down {
-  @media (width < toRem(992)) {
+  @media (width < 992px) {
     @content;
   }
 }
 
 @mixin breakpoint-md-down {
-  @media (width < toRem(768)) {
+  @media (width < 768px) {
     @content;
   }
 }
 
 @mixin breakpoint-sm-down {
-  @media (width < toRem(576)) {
+  @media (width < 576px) {
     @content;
   }
 }
 
 @mixin breakpoint-xs-down {
-  @media (width < toRem(480)) {
+  @media (width < 480px) {
     @content;
   }
 }

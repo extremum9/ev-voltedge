@@ -1,10 +1,9 @@
 @use '../abstracts' as *;
 
 .hero {
-  margin-block-end: fluid(170, 40, $unit: px);
+  margin-block-end: fluid(170, 40);
   padding-block-start: calc(
-    fluid(98, 40, $unit: px) + var(--topbar-height) +
-      var(--topbar-inset-block-start)
+    fluid(98, 40) + var(--topbar-height) + var(--topbar-inset-block-start)
   );
   background: linear-gradient(
     180deg,
@@ -12,7 +11,7 @@
     var(--color-white) 100%
   );
   &-body {
-    margin-block-end: fluid(75, 20, $unit: px);
+    margin-block-end: fluid(75, 20);
     text-align: center;
     > :last-child {
       color: var(--text-tertiary);
@@ -25,9 +24,9 @@
 
   &-image-wrap {
     position: relative;
-    margin-block: calc(fluid(180, 45, $unit: px) * -1);
+    margin-block: calc(fluid(180, 45) * -1);
     img {
-      width: fluid(821, 700, $minWidth: 768, $unit: px);
+      width: fluid(821, 700, $minWidth: 768);
       margin-inline: auto;
       aspect-ratio: 821 / 398;
     }
@@ -35,24 +34,21 @@
 
   &-stats {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(min(toRem(324), 100%), 1fr)
-    );
+    grid-template-columns: repeat(auto-fill, minmax(min(324px, 100%), 1fr));
     align-items: center;
-    gap: fluid(24, 10, $unit: px);
-    padding-block-start: fluid(75, 20, $unit: px);
+    gap: fluid(24, 10);
+    padding-block-start: fluid(75, 20);
     border-block-start: 1px solid var(--color-gray-300);
     &-item {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
       justify-content: start;
-      gap: toRem(22);
+      gap: 22px;
     }
 
     &-label {
-      font-size: fluid(24, 20);
+      font-size: fluidRem(24, 20);
       line-height: 1.3;
       text-box: cap both;
       color: var(--text-secondary);

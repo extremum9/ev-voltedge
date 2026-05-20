@@ -35,7 +35,7 @@ p {
 }
 
 :where(p:not([class])):not(:last-child) {
-  margin-block-end: var(--paragraph-margin-bottom, 10px);
+  margin-block-end: var(--paragraph-margin-block-end, 10px);
 }
 
 h1,

@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .footer {
-  padding-block: fluid(50, 20, $unit: px);
+  padding-block: fluid(50, 20);
   color: var(--text-inverted);
   background:
     linear-gradient(
@@ -12,8 +12,8 @@
     url('/images/footer/background-image.jpg') 50% / cover no-repeat;
 
   &-container {
-    padding-block: fluid(50, 20, $unit: px);
-    padding-inline: fluid(50, 20, $unit: px);
+    padding-block: fluid(50, 20);
+    padding-inline: fluid(50, 20);
     background-color: rgba(var(--background-primary-rgb), 0.1);
     backdrop-filter: blur(16px);
   }
@@ -23,7 +23,7 @@
     grid-template-columns: minmax(160px, 0.45fr) 1fr;
     align-items: start;
     gap: 30px 40px;
-    margin-block-end: fluid(40, 30, $unit: px);
+    margin-block-end: fluid(40, 30);
     @include breakpoint-md-down {
       grid-template-columns: 1fr;
     }
@@ -36,10 +36,10 @@
   &-navigation {
     &-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(toRem(150), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 24px;
       @include breakpoint-md-down {
-        grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       }
     }
 
@@ -52,7 +52,7 @@
     }
 
     &-link {
-      padding-block: toRem(8);
+      padding-block: 8px;
       color: rgba(var(--text-inverted-rgb), 0.5);
       @include hover {
         color: var(--text-inverted-hover);
@@ -66,7 +66,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    padding-block-start: fluid(40, 30, $unit: px);
+    padding-block-start: fluid(40, 30);
     border-top: 1px solid rgba(var(--background-primary-rgb), 0.1);
   }
 
@@ -75,11 +75,11 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      column-gap: toRem(24);
+      column-gap: 24px;
     }
 
     &-link {
-      padding-block: toRem(5);
+      padding-block: 5px;
       @include hover {
         color: var(--text-inverted-hover);
       }

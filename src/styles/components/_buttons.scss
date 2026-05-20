@@ -4,10 +4,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  column-gap: toRem(10);
-  padding-block: toRem(10);
-  padding-inline: toRem(20);
+  column-gap: 10px;
+  padding-block: 10px;
+  padding-inline: 10px;
   white-space: nowrap;
+  font-size: var(--button-font-size);
   transition-property: background-color;
   &-primary {
     color: var(--text-accent);

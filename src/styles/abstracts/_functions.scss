@@ -4,10 +4,6 @@
   @return math.div($px, 16) + rem;
 }
 
-@function toEm($px) {
-  @return math.div($px, 16) + em;
-}
-
 $viewportMaxWidth: 1240;
 $viewportMinWidth: 320;
 
@@ -15,19 +11,26 @@ $viewportMinWidth: 320;
   $maxSize,
   $minSize,
   $maxWidth: $viewportMaxWidth,
-  $minWidth: $viewportMinWidth,
-  $unit: rem
+  $minWidth: $viewportMinWidth
 ) {
   $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
   $intercept: $minSize - $slope * $minWidth;
 
-  @if $unit == px {
-    @return clamp(
-      #{$minSize}px,
-      #{$intercept}px + #{$slope * 100vw},
-      #{$maxSize}px
-    );
-  }
+  @return clamp(
+    #{$minSize}px,
+    #{$intercept}px + #{$slope * 100vw},
+    #{$maxSize}px
+  );
+}
+
+@function fluidRem(
+  $maxSize,
+  $minSize,
+  $maxWidth: $viewportMaxWidth,
+  $minWidth: $viewportMinWidth
+) {
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $intercept: $minSize - $slope * $minWidth;
 
   @return clamp(
     toRem($minSize),
