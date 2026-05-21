@@ -10,11 +10,13 @@
   --color-gray-700: #4d4d4d;
   --color-gray-500: #999999;
   --color-gray-300: #e9e9e9;
+  --color-gray-200: #ebedef;
   --color-gray-100: #edf2f6;
 
   --background-primary: var(--color-white);
   --background-primary-rgb: var(--color-white-rgb);
   --background-secondary: var(--color-gray-100);
+  --background-secondary-hover: var(--color-gray-200);
   --background-inverted: var(--color-black);
   --background-inverted-rgb: var(--color-black-rgb);
   --background-accent: var(--color-yellow);

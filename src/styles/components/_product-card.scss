@@ -1,0 +1,25 @@
+.product-card {
+  position: relative;
+  &-image-wrap {
+    margin-block-end: 20px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &-pricing {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &-old-price {
+    text-decoration: none;
+    color: var(--text-secondary);
+  }
+}

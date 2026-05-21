@@ -12,6 +12,7 @@ h6,
 .heading-4,
 .heading-5,
 .heading-6 {
+  font-weight: 400;
   line-height: 1.2;
   color: var(--text-primary);
 }
@@ -39,6 +40,7 @@ h2,
 h3,
 .heading-3 {
   font-size: toRem(60);
+  text-transform: none;
 }
 
 h4,

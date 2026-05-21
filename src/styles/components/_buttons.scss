@@ -18,6 +18,9 @@
   &-secondary {
     color: var(--text-primary);
     background-color: var(--background-secondary);
+    @include hover {
+      background-color: var(--background-secondary-hover);
+    }
   }
 
   &-accent {
