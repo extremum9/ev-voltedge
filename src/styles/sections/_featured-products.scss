@@ -1,6 +1,8 @@
+@use '../abstracts' as *;
+
 .featured-products {
-  padding-block-end: 128px;
+  padding-block-end: fluid(128, 60);
   &-header {
-    margin-block-end: 45px;
+    margin-block-end: fluid(45, 30);
   }
 }

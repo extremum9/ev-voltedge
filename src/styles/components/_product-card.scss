@@ -1,15 +1,26 @@
+@use '../abstracts' as *;
+
 .product-card {
   position: relative;
   &-image-wrap {
     margin-block-end: 20px;
     img {
       width: 100%;
+      aspect-ratio: 370 / 446;
     }
   }
 
   &-content {
     display: grid;
     row-gap: 10px;
+  }
+
+  &-title {
+    a {
+      @include hover {
+        color: var(--text-primary-hover);
+      }
+    }
   }
 
   &-pricing {

@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .hero {
-  margin-block-end: fluid(170, 40);
+  margin-block-end: fluid(170, 60);
   padding-block-start: calc(
     fluid(98, 40) + var(--topbar-height) + var(--topbar-inset-block-start)
   );
@@ -28,6 +28,7 @@
     img {
       width: fluid(821, 700, $minWidth: 768);
       margin-inline: auto;
+      aspect-ratio: 821 / 398;
     }
   }
 

@@ -39,7 +39,7 @@ h2,
 
 h3,
 .heading-3 {
-  font-size: toRem(60);
+  font-size: fluidRem(60, 38);
   text-transform: none;
 }
 
