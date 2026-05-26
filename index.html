@@ -95,12 +95,14 @@
       </section>
 
       <section
-        class="featured-products"
+        class="featured-products section-spacing"
         aria-labelledby="featured-products-heading"
       >
         <div class="featured-products-container container">
           <header class="featured-products-header section-header">
-            <a class="button button-secondary" href="#">Versatile Power</a>
+            <a class="section-label button button-secondary" href="#"
+              >Versatile Power</a
+            >
             <h2 id="featured-products-heading" class="heading-3">
               Discover Our Multi-Functional Chargers
             </h2>
@@ -196,10 +198,15 @@
         </div>
       </section>
 
-      <section class="about-us" aria-labelledby="about-us-heading">
+      <section
+        class="about-us section-spacing"
+        aria-labelledby="about-us-heading"
+      >
         <div class="about-us-container container">
           <header class="about-us-header">
-            <a class="button button-secondary" href="#">Our Story</a>
+            <a class="about-us-label button button-secondary" href="#"
+              >Our Story</a
+            >
             <div class="about-us-intro">
               <h2 id="about-us-heading" class="heading-3">
                 Powering A Greener Future, One Drive At A Time
@@ -214,23 +221,28 @@
           </header>
 
           <div class="about-us-body">
-            <div class="about-us-feature">
-              <div class="about-us-feature-image-wrap">
+            <div class="about-us-card">
+              <button
+                class="about-us-card-play-button-wrap"
+                type="button"
+                aria-label="Play video"
+              >
                 <img
                   src="/images/about-us/image-01.jpg"
                   width="608"
                   height="300"
                   alt
                 />
-                <button
-                  class="button-play"
-                  type="button"
-                  aria-label="Play video"
-                ></button>
-              </div>
+                <span
+                  class="about-us-card-play-button play-button"
+                  aria-hidden="true"
+                ></span>
+              </button>
 
-              <div class="about-us-feature-content">
-                <h3 class="heading-5">Join A Connected Charging Network</h3>
+              <div class="about-us-card-content">
+                <h3 class="about-us-card-title heading-5">
+                  Join A Connected Charging Network
+                </h3>
                 <p>
                   Be part of a growing network of EV drivers who share a passion
                   for sustainability and innovation.
@@ -238,8 +250,8 @@
               </div>
             </div>
 
-            <div class="about-us-feature-overlay">
-              <div class="about-us-feature-image-wrap">
+            <div class="about-us-card-overlay">
+              <div class="about-us-card-image-wrap">
                 <img
                   src="/images/about-us/image-02.jpg"
                   width="610"
@@ -248,14 +260,16 @@
                 />
               </div>
 
-              <div class="about-us-feature-content">
-                <h3 class="heading-5">EVs For Everyone</h3>
-                <p>
+              <div class="about-us-card-content">
+                <h3 class="about-us-card-title heading-5">EVs For Everyone</h3>
+                <p class="about-us-card-description">
                   From eco-conscious drivers to performance enthusiasts, we
                   believe electric vehicles should be accessible and exciting
                   for all.
                 </p>
-                <a class="button button-accent" href="#">Our Story</a>
+                <a class="about-us-card-button button button-accent" href="#"
+                  >Our Story</a
+                >
               </div>
             </div>
           </div>

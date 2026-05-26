@@ -1,0 +1,13 @@
+.section {
+  &-spacing {
+    margin-block-end: var(--section-spacing);
+  }
+
+  &-header {
+    text-align: center;
+  }
+
+  &-label {
+    margin-block-end: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.play-button {
+  display: inline-grid;
+  place-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--background-accent);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+  &::before {
+    content: '';
+    width: 30px;
+    height: 34px;
+    background-color: var(--background-inverted);
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+}
