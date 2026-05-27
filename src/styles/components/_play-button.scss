@@ -3,15 +3,15 @@
 .play-button {
   display: inline-grid;
   place-content: center;
-  width: 64px;
-  height: 64px;
+  width: fluid(64, 48);
+  aspect-ratio: 1;
   background-color: var(--background-accent);
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
   &::before {
     content: '';
-    width: 30px;
-    height: 34px;
+    width: fluid(30, 20);
+    height: fluid(34, 24);
     background-color: var(--background-inverted);
     clip-path: polygon(0 0, 0 100%, 100% 50%);
   }
