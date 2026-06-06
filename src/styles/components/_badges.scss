@@ -3,13 +3,23 @@
   padding-block: 10px;
   padding-inline: 20px;
   text-align: center;
-  &-transparent {
+  &-primary {
     color: var(--text-inverted);
-    background-color: rgba(var(--text-inverted-rgb), 0.1);
+    background-color: var(--background-inverted);
   }
 
   &-secondary {
     color: var(--text-primary);
     background-color: var(--background-secondary);
+  }
+
+  &-transparent {
+    color: var(--text-inverted);
+    background-color: rgba(var(--text-inverted-rgb), 0.1);
+  }
+
+  &-small {
+    padding-block: 6px;
+    padding-inline: 10px;
   }
 }
