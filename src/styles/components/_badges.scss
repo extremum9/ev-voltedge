@@ -1,0 +1,15 @@
+.badge {
+  display: inline-block;
+  padding-block: 10px;
+  padding-inline: 20px;
+  text-align: center;
+  &-transparent {
+    color: var(--text-inverted);
+    background-color: rgba(var(--text-inverted-rgb), 0.1);
+  }
+
+  &-secondary {
+    color: var(--text-primary);
+    background-color: var(--background-secondary);
+  }
+}

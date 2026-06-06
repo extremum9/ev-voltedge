@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   column-gap: 10px;
-  padding-block: 10px;
-  padding-inline: 20px;
+  padding-block: fluid(18, 16);
+  padding-inline: fluid(24, 20);
   white-space: nowrap;
   font-size: var(--button-font-size);
   transition-property: background-color;
@@ -15,24 +15,11 @@
     background-color: var(--background-inverted);
   }
 
-  &-secondary {
-    color: var(--text-primary);
-    background-color: var(--background-secondary);
-    @include hover {
-      background-color: var(--background-secondary-hover);
-    }
-  }
-
   &-accent {
     color: var(--text-primary);
     background-color: var(--background-accent);
     @include hover {
       background-color: var(--background-accent-hover);
     }
-  }
-
-  &-big {
-    padding-block: fluid(18, 16);
-    padding-inline: fluid(24, 20);
   }
 }
