@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.metrics {
+  padding-block: var(--section-spacing);
+  color: var(--text-tertiary);
+  background-color: var(--background-inverted);
+  &-header {
+    margin-block-end: 60px;
+  }
+
+  &-title {
+    color: var(--text-inverted);
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: auto 1fr 1fr;
+    gap: 20px;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 26px;
+    &-testimonial,
+    &-hero {
+      padding-block: 32px;
+      padding-inline: 32px;
+    }
+
+    &-statistic,
+    &-mission {
+      padding-block: 24px;
+      padding-inline: 24px;
+    }
+
+    &-testimonial {
+      grid-column: 1 / 3;
+      background-color: rgba(var(--background-primary-rgb), 0.1);
+      .metrics-card-title {
+        margin-block-end: 6px;
+      }
+    }
+
+    &-statistic {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+      align-items: start;
+      background: url('/images/metrics/card-background-image-01.png') center /
+        cover no-repeat;
+    }
+
+    &-logo {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &-mission {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      row-gap: 40px;
+      background-color: rgba(var(--background-primary-rgb), 0.1);
+    }
+
+    &-hero {
+      grid-column: 3 / 4;
+      grid-row: 1 / 4;
+      background: url('/images/metrics/card-background-image-02.jpg') center /
+        cover no-repeat;
+    }
+
+    &-header {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &-title {
+      color: var(--text-inverted);
+    }
+
+    &-highlight {
+      color: var(--text-accent);
+    }
+
+    &-badge {
+      padding-block: 5px;
+      padding-inline: 12px;
+    }
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &-user-stats,
+    &-brand {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+    }
+  }
+}
