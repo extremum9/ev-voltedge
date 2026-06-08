@@ -5,7 +5,7 @@
   color: var(--text-tertiary);
   background-color: var(--background-inverted);
   &-header {
-    margin-block-end: 60px;
+    margin-block-end: fluid(60, 30);
   }
 
   &-title {
@@ -20,23 +20,45 @@
       'statistic   logo        hero'
       'statistic   mission     hero';
     gap: 20px;
+    @include breakpoint-lg-down {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'hero        hero'
+        'testimonial testimonial'
+        'statistic   logo'
+        'statistic   mission';
+    }
+
+    @include breakpoint-xs-down {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'hero'
+        'testimonial'
+        'statistic'
+        'logo'
+        'mission';
+    }
   }
 
   &-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 26px;
+    row-gap: fluid(26, 20);
     &-testimonial,
     &-hero {
-      padding-block: 32px;
-      padding-inline: 32px;
+      --_padding: #{fluid(32, 16)};
+
+      padding-block: var(--_padding);
+      padding-inline: var(--_padding);
     }
 
     &-statistic,
     &-mission {
-      padding-block: 24px;
-      padding-inline: 24px;
+      --_padding: #{fluid(24, 16)};
+
+      padding-block: var(--_padding);
+      padding-inline: var(--_padding);
     }
 
     &-testimonial {
@@ -56,11 +78,14 @@
 
     &-logo {
       grid-area: logo;
+      img {
+        width: 100%;
+      }
     }
 
     &-mission {
       grid-area: mission;
-      row-gap: 40px;
+      row-gap: fluid(40, 20);
       background-color: rgba(var(--background-primary-rgb), 0.1);
     }
 
@@ -77,6 +102,12 @@
       align-items: start;
       justify-content: space-between;
       gap: 16px;
+      img {
+        --_size: #{fluid(74, 48)};
+
+        width: var(--_size);
+        height: var(--_size);
+      }
     }
 
     &-title {
