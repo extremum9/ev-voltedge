@@ -7,6 +7,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "swiper": "12.2.0"
+  },
   "devDependencies": {
     "autoprefixer": "10.4.27",
     "glob": "13.0.6",

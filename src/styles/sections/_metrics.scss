@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .metrics {
+  margin-block-end: fluid(100, 40);
   padding-block: var(--section-spacing);
   color: var(--text-tertiary);
   background-color: var(--background-inverted);
