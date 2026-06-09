@@ -2,9 +2,19 @@
 @use 'swiper/css/pagination';
 
 .swiper {
-  width: 100%;
-  min-width: 0;
   &-slide {
     height: auto;
+  }
+
+  &-pagination {
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-color: #000000;
+    --swiper-pagination-bullet-inactive-color: #999999;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+    position: static;
+    &-bullet {
+      cursor: pointer;
+    }
   }
 }

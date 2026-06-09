@@ -13,6 +13,10 @@ body {
   }
 }
 
+main {
+  min-width: 0;
+}
+
 p {
   --paragraph-margin-block-end: 10px;
 }
