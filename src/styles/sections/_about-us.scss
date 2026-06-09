@@ -2,7 +2,7 @@
 
 .about-us {
   &-header {
-    margin-block-end: fluid(60, 30);
+    text-align: start;
     @include breakpoint-md-down {
       text-align: center;
     }

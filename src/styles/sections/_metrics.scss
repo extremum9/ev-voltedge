@@ -4,10 +4,6 @@
   padding-block: var(--section-spacing);
   color: var(--text-tertiary);
   background-color: var(--background-inverted);
-  &-header {
-    margin-block-end: fluid(60, 30);
-  }
-
   &-title {
     color: var(--text-inverted);
   }

@@ -1,9 +1,12 @@
+@use '../abstracts' as *;
+
 .section {
   &-spacing {
     margin-block-end: var(--section-spacing);
   }
 
   &-header {
+    margin-block-end: fluid(60, 30);
     text-align: center;
   }
 
