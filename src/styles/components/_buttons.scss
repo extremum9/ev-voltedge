@@ -13,6 +13,9 @@
   &-primary {
     color: var(--text-accent);
     background-color: var(--background-inverted);
+    @include hover {
+      background-color: rgba(var(--color-black-rgb), 0.8);
+    }
   }
 
   &-accent {

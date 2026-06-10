@@ -7,10 +7,16 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    @include breakpoint-md-down {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-title {
     margin-block-end: 32px;
+    @include breakpoint-md-down {
+      text-align: center;
+    }
   }
 
   &-form {
