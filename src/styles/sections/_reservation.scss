@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.reservation {
+  &-container {
+    display: grid;
+    grid-template-columns: minmax(0, 505px) minmax(0, 712px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &-title {
+    margin-block-end: 32px;
+  }
+
+  &-form {
+    display: grid;
+    justify-items: start;
+    row-gap: 20px;
+  }
+}

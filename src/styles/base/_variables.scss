@@ -38,6 +38,8 @@
 
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
+  --transition-base: var(--transition-duration)
+    var(--transition-timing-function);
 
   --topbar-height: #{fluid(100, 75)};
   --topbar-inset-block-start: #{fluid(32, 16)};
