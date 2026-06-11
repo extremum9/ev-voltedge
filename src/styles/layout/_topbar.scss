@@ -14,14 +14,13 @@
     padding-block: 5px;
     padding-inline: fluid(18, 10);
     border-radius: 10px;
-    background-color: rgba(var(--background-primary-rgb), 0.5);
+    background-color: var(--topbar-background-color);
     transition:
-      background-color var(--transition-duration)
-        var(--transition-timing-function),
-      box-shadow var(--transition-duration) var(--transition-timing-function);
+      background-color var(--transition-base),
+      box-shadow var(--transition-base);
     .scroll & {
-      background-color: var(--background-primary);
-      box-shadow: 0 0 8px 0 var(--color-gray-700);
+      background-color: var(--topbar-scroll-background-color);
+      box-shadow: 0 0 8px 0 var(--topbar-scroll-box-shadow-color);
     }
   }
 
@@ -54,9 +53,8 @@
       padding-inline: 24px;
       overflow-y: auto;
       overscroll-behavior: none;
-      background-color: rgba(var(--background-primary-rgb), 0.9);
-      transition: translate var(--transition-duration)
-        var(--transition-timing-function);
+      background-color: var(--mobile-navigation-background-color);
+      transition: translate var(--transition-base);
       .open & {
         translate: 0;
       }
@@ -75,9 +73,9 @@
 
     &-link {
       padding-block: 5px;
-      color: var(--text-primary);
+      color: var(--navigation-link-color);
       @include hover {
-        color: var(--text-primary-hover);
+        color: var(--navigation-link-hover-color);
       }
 
       @include breakpoint-lg-down {

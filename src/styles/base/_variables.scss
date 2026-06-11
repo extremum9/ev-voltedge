@@ -5,31 +5,70 @@
   --color-black-rgb: 0, 0, 0;
   --color-white: #ffffff;
   --color-white-rgb: 255, 255, 255;
-  --color-yellow: #e9ff61;
-  --color-yellow-dark: #d4ea3d;
+  --color-lime-400: #e9ff61;
+  --color-lime-500: #cbe61a;
+  --color-gray-800: #262626;
   --color-gray-700: #4d4d4d;
   --color-gray-500: #999999;
   --color-gray-300: #e9e9e9;
-  --color-gray-200: #ebedef;
   --color-gray-100: #edf2f6;
 
-  --background-primary: var(--color-white);
-  --background-primary-rgb: var(--color-white-rgb);
-  --background-secondary: var(--color-gray-100);
-  --background-secondary-hover: var(--color-gray-200);
-  --background-inverted: var(--color-black);
-  --background-inverted-rgb: var(--color-black-rgb);
-  --background-accent: var(--color-yellow);
-  --background-accent-hover: var(--color-yellow-dark);
+  --heading-color: var(--color-black);
 
-  --text-primary: var(--color-black);
-  --text-primary-hover: var(--color-gray-700);
-  --text-secondary: var(--color-gray-500);
-  --text-tertiary: var(--color-gray-300);
-  --text-accent: var(--color-yellow);
-  --text-inverted: var(--color-white);
-  --text-inverted-rgb: var(--color-white-rgb);
-  --text-inverted-hover: var(--color-gray-300);
+  --badge-primary-text-color: var(--color-white);
+  --badge-primary-background-color: var(--color-black);
+  --badge-secondary-text-color: var(--color-black);
+  --badge-secondary-background-color: var(--color-gray-100);
+  --badge-transparent-text-color: var(--color-white);
+  --badge-transparent-background-color: rgba(var(--color-white-rgb), 0.1);
+
+  --border-color: var(--color-gray-300);
+
+  --button-primary-text-color: var(--color-lime-400);
+  --button-primary-background-color: var(--color-black);
+  --button-primary-hover-background-color: var(--color-gray-800);
+
+  --button-accent-text-color: var(--color-black);
+  --button-accent-background-color: var(--color-lime-400);
+  --button-accent-hover-background-color: var(--color-lime-500);
+
+  --form-label-color: var(--color-black);
+  --form-control-text-color: var(--color-black);
+  --form-control-focus-border-color: var(--color-black);
+  --form-control-background-color: var(--color-gray-100);
+  --form-control-placeholder-color: var(--color-gray-500);
+
+  --body-text-color: var(--color-gray-500);
+  --body-background-color: var(--color-white);
+
+  --topbar-background-color: rgba(var(--color-white-rgb), 0.5);
+  --topbar-scroll-background-color: var(--color-white);
+  --topbar-scroll-box-shadow-color: var(--color-gray-800);
+
+  --navigation-link-color: var(--color-black);
+  --navigation-link-hover-color: var(--color-gray-700);
+  --mobile-navigation-background-color: rgba(var(--color-white-rgb), 0.9);
+
+  --hero-background-color: linear-gradient(
+    180deg,
+    var(--color-gray-300) 40%,
+    var(--color-white) 100%
+  );
+
+  --metrics-title-color: var(--color-white);
+  --metrics-text-color: var(--color-gray-300);
+  --metrics-highlight-text-color: var(--color-lime-400);
+  --metrics-background-color: var(--color-black);
+  --metrics-card-background-color: rgba(var(--color-white-rgb), 0.1);
+
+  --footer-background-color: rgba(var(--color-white-rgb), 0.1);
+  --footer-bottom-border-color: rgba(var(--color-white-rgb), 0.1);
+  --footer-text-color: var(--color-white);
+  --footer-link-color: rgba(var(--color-white-rgb), 0.5);
+  --footer-link-hover-color: var(--color-gray-300);
+
+  --swiper-pagination-color: var(--color-black);
+  --swiper-pagination-bullet-inactive-color: var(--color-gray-500);
 
   --font-family-primary: 'Syne', sans-serif;
 
@@ -46,4 +85,7 @@
   --topbar-z-index: 1000;
 
   --section-spacing: #{fluid(128, 60)};
+
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }

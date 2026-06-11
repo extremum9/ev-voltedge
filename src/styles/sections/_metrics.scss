@@ -3,10 +3,10 @@
 .metrics {
   margin-block-end: fluid(100, 40);
   padding-block: var(--section-spacing);
-  color: var(--text-tertiary);
-  background-color: var(--background-inverted);
+  color: var(--metrics-text-color);
+  background-color: var(--metrics-background-color);
   &-title {
-    color: var(--text-inverted);
+    color: var(--metrics-title-color);
   }
 
   &-body {
@@ -60,7 +60,7 @@
 
     &-testimonial {
       grid-area: testimonial;
-      background-color: rgba(var(--background-primary-rgb), 0.1);
+      background-color: var(--metrics-card-background-color);
       .metrics-card-title {
         margin-block-end: 6px;
       }
@@ -83,13 +83,17 @@
     &-mission {
       grid-area: mission;
       row-gap: fluid(40, 20);
-      background-color: rgba(var(--background-primary-rgb), 0.1);
+      background-color: var(--metrics-card-background-color);
     }
 
     &-hero {
       grid-area: hero;
       background:
-        linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+        linear-gradient(
+          0deg,
+          rgba(var(--color-black-rgb), 0.5) 0%,
+          rgba(var(--color-black-rgb), 0.5) 100%
+        ),
         url('/images/metrics/card-background-image-02.jpg') center / cover
           no-repeat;
     }
@@ -108,11 +112,11 @@
     }
 
     &-title {
-      color: var(--text-inverted);
+      color: var(--metrics-title-color);
     }
 
     &-highlight {
-      color: var(--text-accent);
+      color: var(--metrics-highlight-text-color);
     }
 
     &-badge {

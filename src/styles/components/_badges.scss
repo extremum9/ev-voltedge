@@ -4,18 +4,18 @@
   padding-inline: 20px;
   text-align: center;
   &-primary {
-    color: var(--text-inverted);
-    background-color: var(--background-inverted);
+    color: var(--badge-primary-text-color);
+    background-color: var(--badge-primary-background-color);
   }
 
   &-secondary {
-    color: var(--text-primary);
-    background-color: var(--background-secondary);
+    color: var(--badge-secondary-text-color);
+    background-color: var(--badge-secondary-background-color);
   }
 
   &-transparent {
-    color: var(--text-inverted);
-    background-color: rgba(var(--text-inverted-rgb), 0.1);
+    color: var(--badge-transparent-text-color);
+    background-color: var(--badge-transparent-background-color);
   }
 
   &-small {

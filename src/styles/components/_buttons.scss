@@ -8,21 +8,20 @@
   padding-block: fluid(18, 16);
   padding-inline: fluid(24, 20);
   white-space: nowrap;
-  font-size: var(--button-font-size);
   transition-property: background-color;
   &-primary {
-    color: var(--text-accent);
-    background-color: var(--background-inverted);
+    color: var(--button-primary-text-color);
+    background-color: var(--button-primary-background-color);
     @include hover {
-      background-color: rgba(var(--color-black-rgb), 0.8);
+      background-color: var(--button-primary-hover-background-color);
     }
   }
 
   &-accent {
-    color: var(--text-primary);
-    background-color: var(--background-accent);
+    color: var(--button-accent-text-color);
+    background-color: var(--button-accent-background-color);
     @include hover {
-      background-color: var(--background-accent-hover);
+      background-color: var(--button-accent-hover-background-color);
     }
   }
 }

@@ -16,7 +16,7 @@
 }
 
 .form-label {
-  color: var(--text-primary);
+  color: var(--form-label-color);
 }
 
 .form-control {
@@ -25,15 +25,15 @@
   padding-inline: 12px;
   border: 1px solid transparent;
   line-height: 1.2;
-  color: var(--text-primary);
-  background-color: var(--background-secondary);
+  color: var(--form-control-text-color);
+  background-color: var(--form-control-background-color);
   transition: border-color var(--transition-base);
   &::placeholder {
-    color: var(--text-secondary);
+    color: var(--form-control-placeholder-color);
   }
 
   &:focus {
-    border-color: var(--text-primary);
+    border-color: var(--form-control-focus-border-color);
     outline: none;
   }
 }

@@ -2,19 +2,19 @@
 
 .footer {
   padding-block: fluid(50, 20);
-  color: var(--text-inverted);
+  color: var(--footer-text-color);
   background:
     linear-gradient(
       0deg,
-      rgba(var(--background-inverted-rgb), 0.5) 0%,
-      rgba(var(--background-inverted-rgb), 0.5) 100%
+      rgba(var(--color-black-rgb), 0.5) 0%,
+      rgba(var(--color-black-rgb), 0.5) 100%
     ),
     url('/images/footer/background-image.jpg') 50% / cover no-repeat;
 
   &-container {
     padding-block: fluid(50, 20);
     padding-inline: fluid(50, 20);
-    background-color: rgba(var(--background-primary-rgb), 0.1);
+    background-color: var(--footer-background-color);
     backdrop-filter: blur(16px);
   }
 
@@ -53,9 +53,9 @@
 
     &-link {
       padding-block: 8px;
-      color: rgba(var(--text-inverted-rgb), 0.5);
+      color: var(--footer-link-color);
       @include hover {
-        color: var(--text-inverted-hover);
+        color: var(--footer-link-hover-color);
       }
     }
   }
@@ -67,7 +67,7 @@
     flex-wrap: wrap;
     gap: 16px;
     padding-block-start: fluid(40, 30);
-    border-top: 1px solid rgba(var(--background-primary-rgb), 0.1);
+    border-top: 1px solid var(--footer-bottom-border-color);
   }
 
   &-copyright {
@@ -81,7 +81,7 @@
     &-link {
       padding-block: 5px;
       @include hover {
-        color: var(--text-inverted-hover);
+        color: var(--footer-link-hover-color);
       }
     }
   }

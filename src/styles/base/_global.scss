@@ -6,8 +6,8 @@ body {
   min-width: 320px;
   font-family: var(--font-family-primary);
   font-size: toRem(18);
-  color: var(--text-secondary);
-  background-color: var(--background-primary);
+  color: var(--body-text-color);
+  background-color: var(--body-background-color);
   &.prevent-scroll {
     overflow: hidden;
   }

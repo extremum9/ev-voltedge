@@ -5,14 +5,13 @@
   place-content: center;
   width: fluid(64, 48);
   aspect-ratio: 1;
-  background-color: var(--background-accent);
-  transition: background-color var(--transition-duration)
-    var(--transition-timing-function);
+  background-color: var(--button-accent-background-color);
+  transition: background-color var(--transition-base);
   &::before {
     content: '';
     width: fluid(30, 20);
     height: fluid(34, 24);
-    background-color: var(--background-inverted);
+    background-color: var(--button-accent-text-color);
     clip-path: polygon(0 0, 0 100%, 100% 50%);
   }
 }

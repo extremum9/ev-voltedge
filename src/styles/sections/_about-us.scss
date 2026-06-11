@@ -43,7 +43,7 @@
 
       @include hover {
         .about-us-card-play-button {
-          background-color: var(--background-accent-hover);
+          background-color: var(--button-accent-hover-background-color);
         }
       }
     }
@@ -92,8 +92,8 @@
           inset: 0;
           background: linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
+            rgba(var(--color-black-rgb), 0.5) 0%,
+            rgba(var(--color-black-rgb), 0.5) 100%
           );
         }
 
@@ -119,7 +119,7 @@
       }
 
       &-title {
-        color: var(--text-inverted);
+        color: var(--color-white);
       }
 
       &-description {
